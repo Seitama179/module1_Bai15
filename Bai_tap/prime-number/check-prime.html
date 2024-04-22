@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="func-check-prime.js"></script>
+<script>
+    let n = +prompt("Nhập n số nguyên tố đầu tiên");
+    let count = 0;
+    let start = +prompt("Nhập số bắt đầu")
+    while (count<n){
+        if (checkPrime(start)){
+            document.write(start+" ");
+            count++;
+        }
+        start++;
+    }
+</script>
+</body>
+</html>
