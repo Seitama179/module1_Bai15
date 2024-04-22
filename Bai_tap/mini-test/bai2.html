@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="rankA"></p>
+<p id="rankB"></p>
+<p id="rankC"></p>
+<p id="average"></p>
+<script src="input-score.js"></script>
+<script src="average-score.js"></script>
+<script>
+    let score = inputScore();
+
+    let average = avrScore(score);
+    document.getElementById("average").innerHTML= "Diem trung binh cua ca lop: "+ average;
+    countRank(score);
+function countRank(a) {
+    let countA = 0;
+    let countB = 0;
+    let countC = 0;
+    for (let i = 0; i < a.length; i++) {
+        if(scoreRank(a[i]) === "A" ) {
+            countA++;
+        }
+        if(scoreRank(a[i]) === "B") {
+            countB++;
+        }
+        if(scoreRank(a[i]) === "C") {
+            countC++;
+        }
+    }
+    document.getElementById("rankA").innerHTML= "So hoc sinh dat diem A: " + countA;
+    document.getElementById("rankB").innerHTML= "So hoc sinh dat diem B: " + countB;
+    document.getElementById("rankC").innerHTML= "So hoc sinh dat diem C: " + countC;
+}
+
+function scoreRank(a) {
+    if (a>8) {
+        return "A";
+    } else if(a>5) {
+        return "B";
+    } else {
+        return "C";
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="func-integer-array.js"></script>
+<script>
+    let arr = integerArr();
+    let num = parseFloat(prompt("Nhap vao so can kiem tra"));
+    checkArr(arr, num);
+    function checkArr(a, b) {
+        for (let i = 0; i < a.length; i++) {
+            if (b===a[i]) {
+                a.splice([i],1);
+            }
+        }
+        document.writeln(a);
+    }
+</script>
+</body>
+</html>
